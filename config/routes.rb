@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'employee#index'
+  match 'employee' => 'employee#info', :via => :get
+  get 'index', to: 'employee#index'
 end

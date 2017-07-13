@@ -1,3 +1,4 @@
+
 # ReportGarden HR Management Console
 
 ## Requirement
@@ -30,33 +31,3 @@ We want to create a human resource(employee) management system where a user can 
 
 Note:
 Try to use the best from all the concepts covered in the session. For example amongst the multiple ways to specify routes which makes more sense to do? The solution will be evaluated on correctness and use of right techniques.
-
-## Assignment - Part II
-
-The HR basic app we create last day doesn't include the storage facility and is not truely dynamic. We will want to add more functionality and make it better. Let's get started.
-
-First of all, we will remove the `Employee.rb`  model class that we have craeted before. Run the below generator command to destory the model.
-
-```bash
-rails destroy model employee
-```
-
-We will have to add the following abilities to the application:
-
-1. The user should be able to add new employees via the app.
-2. While adding a employee the user can also select which project he is currently in. (let's assume @ RG every individaul works on 1 project at a time)
-3. The user should also have the ability to select a **Team Lead** for the new employee.
-5. Add a view where new skills can be added
-4. The user should be able to assign skills to the employee.
-
-When we are able to create employess with selected skills, team lead and projects. We want to list employees under a team lead sorted by the number of skills they have. Here is an example:
-
-Team Lead: Achou
-
-Name | Skills
----- | ------
-Ashrith | 6
-Vamshi|5
-Adil |3
-
-> NOTE: In case two employees have the same score they should be displayed in alpahbetical order
