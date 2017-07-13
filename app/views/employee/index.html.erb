@@ -1,0 +1,54 @@
+<html>
+<style>
+	div.centered 
+	{
+    	text-align: center;
+	}	
+
+	div.centered table 
+	{
+    	margin: 0 auto; 
+    	text-align: center;
+	}
+
+	div.centered th
+	{
+    	margin: 0 auto; 
+    	text-align: center;
+    	background-color: black;
+    	color: white;		
+	}
+
+</style>
+<body>
+<div>
+	<div align="center"><h2><kbd>HR-Management Console</h2></kbd></div>
+	<div class="panel panel-default">
+    <div class="panel-body"><div align="center">Usage : Click on the name to get detailed information about an employee.</div></div>
+  </div>
+  <div align="center">
+	<h2><kbd>Employee Information</kbd></h2> 
+	</div>
+	<div class = "centered">
+	<table style="align:center" class="table table-hover table-striped">
+	<thead class="">
+      <tr>
+      	<th>#</th>
+        <th>Full Name </th>
+      </tr>
+    </thead>
+	<% id = 0 %>
+		<tbody>
+		<% @employee.each do | emp | %>
+			<tr>
+				<td><%= id = id + 1 %></td>
+				<td>
+				<%= link_to emp[:Name], controller: "employee", action: "info", id: (id-1)%>
+				</td>
+			</tr> 
+		<% end %>
+	</tbody>
+	</table>
+	</div>
+</body>
+</html>

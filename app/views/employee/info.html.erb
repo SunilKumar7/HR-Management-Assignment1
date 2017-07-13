@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<div class="table-responsive">
+	<table class="table table-hover">
+	<thead>
+      <tr>
+        <th>Full Name </th>
+        <th>Age</th>
+        <th>Designation</th>
+        <th>Date Of Joining</th>
+      </tr>
+    </thead>
+	<tbody>
+			<tr>
+				<td><%= @data[:Name] %></td>
+				<td><%= @data[:age] %></td>
+				<td><%= @data[:designation] %></td>
+				<td><%= @data[:date_of_joining] %></td>
+			</tr> 
+	</tbody>
+	</table>
+	<div align = "center">
+	<form action="/" method = "get">
+		<input type = "submit" class="btn btn-primary" value = "Go Back?">
+	</form>
+	</div>
+</body>
+</html>
